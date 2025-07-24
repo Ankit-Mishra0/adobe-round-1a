@@ -19,9 +19,11 @@ A Python tool that extracts structured outlines (Title, H1–H3) with 0-based pa
 
 ## Tech Stack
 
-- **Library:** `PyMuPDF (fitz)`
-- **Python Built-ins:** `re`, `json`, `os`, `collections`
+- **Language:** Python 3.9  
+- **PDF Parsing:** [`PyMuPDF==1.24.5`](https://pymupdf.readthedocs.io/en/latest/)  
+- **Others:** `re`, `json`, `os`, `collections`
 
+---
 ## 🐳 Run with Docker
 
 ### 1. Prepare Files
@@ -32,10 +34,10 @@ Ensure your project has:
 - `Dockerfile`
 - `requirements.txt`:
 
-```txt
-PyMuPDF==1.23.8
+**requirements.txt**
 ```
-
+PyMuPDF==1.24.5
+```
 ### 2. Build Image
 
 ```bash

@@ -1,7 +1,6 @@
 
 FROM --platform=linux/amd64 python:3.9-slim-bookworm
 
-
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -12,7 +11,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-RUN chmod +x scraper_pdf.sh
-CMD ["/bin/bash", "scraper_pdf.sh"]
+COPY main.py .
+CMD ["python", "main.py"]
